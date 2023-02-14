@@ -1,15 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import CreateRecipe from './Pages/Dashboard/CreateRecipe/CreateRecipe';
+import Home from './Pages/Home/Home';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <p>Hello Gaes</p>
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/dashboard/create-recipe" element={<CreateRecipe />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
